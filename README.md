@@ -18,7 +18,7 @@
 | [Fig. 5](figures/fig5_case.png) | 일사 차단 사례(2015-12-19 13:50)의 전천영상, 실측 청천지수, 10분 전에 예측한 청천지수 0.6 미만 확률(예측 대상 시각에 맞춰 표시) |
 | [Fig. 6](figures/fig6_sky_states.png) | 맑음, 구름 이동, 흐림 상태의 예측 시점 전천영상 |
 | [Fig. 7](figures/fig7_performance.png) | 두 모델의 10분 전 일사 감소 시작 예측 성능(재현율, 정밀도, F1) |
-| [Fig. 8](figures/fig8_after10min.png) | 10분 전 감소 예측 여부별 실제 10분 뒤 청천지수. 예측했으나 맑음을 유지한 사례: [구름 가장자리](figures/fig8_case_cloud_edge.png), [얇은 구름](figures/fig8_case_thin_cloud.png) |
+| [Fig. 8](figures/fig8_after10min.png) | 감소 예측 여부별 예측 시점 전후 평균 청천지수. 예측했으나 감소하지 않은 사례: [구름 가장자리](figures/fig8_case_cloud_edge.png), [얇은 구름](figures/fig8_case_thin_cloud.png) |
 
 ## 주요 결과 (12~2월)
 
