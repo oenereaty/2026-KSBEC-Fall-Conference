@@ -17,8 +17,8 @@
 | [Fig. 4](figures/fig4_cloud_detection.png) | 원본 영상의 Green/Blue 색비와 색비 편차로 화소별 구름 확률을 구해 구름을 판별하는 과정 |
 | [Fig. 5](figures/fig5_case.png) | 일사 차단 사례(2015-12-19 13:50)의 전천영상, 실측 청천지수, 10분 전에 예측한 청천지수 0.6 미만 확률(예측 대상 시각에 맞춰 표시) |
 | [Fig. 6](figures/fig6_sky_states.png) | 맑음, 구름 이동, 흐림 상태의 예측 시점 전천영상 |
-| [Fig. 7](figures/fig7_performance.png) | 두 모델의 10분 전 일사 감소 시작 예측 성능(재현율, 정밀도, F1) |
-| [Fig. 8](figures/fig8_after10min.png) | 실제 청천지수와 10분 전 예측 확률(2015.12.01). 예측했으나 감소하지 않은 사례: [구름 가장자리](figures/fig8_case_cloud_edge.png), [얇은 구름](figures/fig8_case_thin_cloud.png) |
+| [Fig. 7](figures/fig7_performance.png) | 두 모델의 10분 전 예측 성능(재현율, 정밀도, F1) |
+| [Fig. 8](figures/fig8_after10min.png) | 10분 전 예측과 실제 청천지수의 비교 사례(2015년 12월): (a) 맞힌 사례 12월 1일, (b) 놓친 사례 12월 29일. 다른 오탐 사례: [구름 가장자리](figures/fig8_case_cloud_edge.png), [얇은 구름](figures/fig8_case_thin_cloud.png) |
 
 ## 주요 결과 (12~2월)
 
