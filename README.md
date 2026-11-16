@@ -18,7 +18,7 @@
 | [Fig. 5](figures/fig5_case.png) | 일사 차단 사례(2015-12-19 13:50)의 전천영상, 실측 청천지수, 10분 전에 예측한 청천지수 0.6 미만 확률(예측 대상 시각에 맞춰 표시) |
 | [Fig. 6](figures/fig6_sky_states.png) | 맑음, 구름 이동, 흐림 상태의 예측 시점 전천영상 |
 | [Fig. 7](figures/fig7_performance.png) | 두 모델의 일사 감소 시작 예측 성능(재현율, 정밀도, F1) |
-| [Fig. 8](figures/fig8_false_alarm_ratio.png) | ConvLSTM 오탐 중 실제로 청천지수가 0.8 미만으로 감소한 비율과 사례([구름 가장자리](figures/fig8_case_cloud_edge.png), [얇은 구름](figures/fig8_case_thin_cloud.png)) |
+| [Fig. 8](figures/fig8_outcome.png) | ConvLSTM 예측의 실제 결과 구성(맞힘, 0.8 미만 감소했으나 3분 미만, 감소 없음)과 오탐 사례([구름 가장자리](figures/fig8_case_cloud_edge.png), [얇은 구름](figures/fig8_case_thin_cloud.png)) |
 
 ## 주요 결과 (12~2월)
 
@@ -29,7 +29,7 @@
 
 ## 사례 영상 (1분 간격 영상을 초당 2장으로 재생)
 
-왼쪽은 전천영상(노랑 원: 태양), 오른쪽 위는 실측 청천지수, 오른쪽 아래는 각 시각에 낸 10분 뒤 청천지수 0.6 미만 확률입니다.
+왼쪽은 전천영상(노랑 원: 영상에서 찾은 태양 위치), 오른쪽 위는 실측 청천지수, 오른쪽 아래는 10분 전에 예측한 청천지수 0.6 미만 확률을 예측 대상 시각에 맞춰 그린 것입니다(음영: 지금 낸 예측이 가리키는 앞으로 10분).
 
 | 영상 | 설명 |
 |---|---|
