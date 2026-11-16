@@ -1,0 +1,28 @@
+# 어안렌즈 전천 영상의 시공간 특징을 이용한 단기 일사 차단 예측
+
+2026년 한국생물환경조절학회 추계학술발표회 포스터 **P-149**의 그림과 사례 영상입니다.
+
+- 자료: Folsom, California 1분 간격 전천영상과 일사 (Pedro 등, 2019, doi:10.1063/1.5094494), 2014~2016년
+- 청천지수 = GHI실측 / GHI청천 (Haurwitz, 1945)
+- 비교 모델: 전천영상 ConvLSTM과 일사 이력 모델(LightGBM)
+- 평가: 평가할 겨울을 뺀 나머지로 학습, 12~2월 평가
+
+## 그림
+
+| 그림 | 설명 |
+|---|---|
+| [Fig. 1](figures/fig1_flow.png) | 전천영상 ConvLSTM과 일사 이력 모델의 입력, 학습, 평가 흐름 |
+| [Fig. 2](figures/fig2_irradiance_kt.png) | 2014년 12월 4일 Folsom의 1분 일사량(상)과 청천지수(하), 0.6과 0.8 기준 |
+| [Fig. 3](figures/fig3_convlstm.png) | 영상 5장과 보조 특징으로 차단 확률을 내는 ConvLSTM 구조 |
+| [Fig. 4](figures/fig4_cloud_detection.png) | 원본 영상의 Green/Blue 색비와 색비 편차로 화소별 구름 확률을 구해 구름을 판별하는 과정 |
+| [Fig. 5](figures/fig5_case.png) | 일사 차단 사례(2015-12-19 13:50)의 전천영상, 실측 청천지수, 10분 뒤 청천지수 0.6 미만 확률 |
+| [Fig. 6](figures/fig6_sky_states.png) | 맑음, 구름 이동, 흐림 상태의 예측 시점 전천영상 |
+| [Fig. 7](figures/fig7_performance.png) | 두 모델의 일사 감소 시작 예측 성능(재현율, 정밀도, F1) |
+| [Fig. 8](figures/fig8_false_alarm_ratio.png) | ConvLSTM 오탐 중 실제로 청천지수가 0.8 미만으로 감소한 비율과 사례([구름 가장자리](figures/fig8_case_cloud_edge.png), [얇은 구름](figures/fig8_case_thin_cloud.png)) |
+
+## 주요 결과 (12~2월)
+
+| 모델 | 재현율 5분 / 10분 | 정밀도 5분 / 10분 | F1 5분 / 10분 |
+|---|---|---|---|
+| 일사 이력 모델 | 0.63 / 0.65 | 0.40 / 0.40 | 0.49 / 0.49 |
+| ConvLSTM | 0.81 / 0.82 | 0.51 / 0.55 | 0.63 / 0.66 |
